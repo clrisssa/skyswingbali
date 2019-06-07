@@ -1,0 +1,61 @@
+<div class="parallax text-center fadeInClass" [class.changed-img]="changedImg"
+  [ngStyle]="{'background-image': 'url(' + imgPath + ')'}">
+  <div class="home-title">
+    {{caption}}
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div style="height:50px"></div>
+  </div>
+  <div class="row h-20">
+    <!-- <div class="col">
+    </div> -->
+    <div class="col text-center">
+      <a routerLink="/info/outdoor">
+        <div class="circle" [class.active]="activeLookup['outdoor']" (click)="mouseClick('outdoor')"
+          (mouseenter)="mouseEnter('outdoor') " (mouseleave)="mouseLeave('outdoor')">
+          <img class="circle-icon" src="../assets/images/outdoor_icon.png" alt="">
+        </div>
+        <p class="circle-title text-center">Outdoor Activities</p>
+      </a>
+    </div>
+    <div class="col">
+      <a routerLink="/info/restaurant">
+        <div class="circle" [class.active]="activeLookup['restaurant']" (click)="mouseClick('restaurant')"
+          (mouseenter)="mouseEnter('restaurant') " (mouseleave)="mouseLeave('restaurant')">
+          <img class="circle-icon" src="../assets/images/restaurant_icon.png" alt="">
+        </div>
+        <p class="circle-title text-center">Restaurant & Bar</p>
+      </a>
+
+    </div>
+
+    <div class="col">
+      <a routerLink="/info/spa">
+
+        <div class="circle" [class.active]="activeLookup['spa']" (click)="mouseClick('spa')"
+          (mouseenter)="mouseEnter('spa') " (mouseleave)="mouseLeave('spa')">
+          <img class="circle-icon" src="../assets/images/spa_icon.png" alt="">
+        </div>
+
+        <p class="circle-title text-center">Spa & Massage</p>
+      </a>
+
+    </div>
+    <div class="col">
+      <a routerLink="/info/photo">
+
+        <div class="circle" [class.active]="activeLookup['photo']" (click)="mouseClick('photo')"
+          (mouseenter)="mouseEnter('photo') " (mouseleave)="mouseLeave('photo')">
+          <img class="circle-icon" src="../assets/images/photo_icon.png" alt="">
+        </div>
+        <p class="circle-title text-center">Photo Spots</p>
+      </a>
+
+    </div>
+  </div>
+
+</div>
