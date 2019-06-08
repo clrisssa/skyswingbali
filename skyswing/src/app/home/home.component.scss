@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 .parallax {
   /* The image used */
   //   background-image: url("src/assets/images/IMG_3940.jpg");
@@ -7,16 +9,20 @@
   background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: 100%;
+  border: 5px double rgba(255, 255, 255, 0.582);
+  // line-height: 60vh;
 }
 
+
 .home-title {
+  margin-top: 30vh;
+  margin-bottom: 30vh;
+
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 5px;
-  line-height: 60vh;
   text-shadow: 3px 3px 10px black;
-  font-family: Georgia;
-  border: 5px double rgba(255, 255, 255, 0.582);
+  font-family: 'Montserrat', sans-serif;;
   /* min-height: 550px;  */
 }
 
@@ -38,8 +44,10 @@ body {
   color: #fff;
   font-size: 15px;
   text-align: center;
-  font-family: Georgia;
+  font-family: 'Montserrat', 'sans-serif';
   letter-spacing: 3px;
+  text-shadow: 1px 1px 10px black;
+
 
 }
 .circle-icon {
@@ -47,12 +55,13 @@ body {
   width: 80%;
   height: 80%;
   line-height: 0;
+  margin-bottom:50%;
   position: relative;
 }
 
 .circle {
-  width: 25vh;
-  height: 25vh;
+  width: 20vh;
+  height: 20vh;
   border-radius: 50%;
   font-size: 15px;
   color: #fff;
@@ -63,6 +72,8 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+
   // margin-left: 25%;
   // margin-right: 20%;
   //start click effect

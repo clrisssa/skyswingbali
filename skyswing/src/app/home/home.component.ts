@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,10 +19,11 @@ export class HomeComponent implements OnInit {
   isOpen: boolean = false
   toggleText: String = "Menu"
 
+  //keep track of the button statuses (active/not)
   activeLookup = {}
   changedImg = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.imgLookup['outdoor'] = '../assets/images/outdoor.jpg'
@@ -57,9 +59,38 @@ export class HomeComponent implements OnInit {
   }
 
   mouseLeave(item) {
-    if (!this.activeLookup[item]) {
+    let outdoorActive = this.activeLookup['outdoor']
+    let restActive = this.activeLookup['restaurant']
+    let spaActive = this.activeLookup['spa']
+    let photoActive = this.activeLookup['photo']
+
+    if (!outdoorActive &&
+      !restActive &&
+      !spaActive &&
+      !photoActive) {
       this.imgPath = this.initialImg
       this.caption = this.initialCaption
+    }
+
+    if (outdoorActive) {
+      this.imgPath = this.imgLookup['outdoor']
+      this.caption = this.captionLookup['outdoor']
+
+    }
+    if (restActive) {
+      this.imgPath = this.imgLookup['restaurant']
+      this.caption = this.captionLookup['restaurant']
+
+    }
+    if (spaActive) {
+      this.imgPath = this.imgLookup['spa']
+      this.caption = this.captionLookup['spa']
+
+    }
+    if (photoActive) {
+      this.imgPath = this.imgLookup['photo']
+      this.caption = this.captionLookup['photo']
+
     }
   }
 
@@ -78,5 +109,15 @@ export class HomeComponent implements OnInit {
 
     console.log(this.activeLookup[item])
     this.changedImg = true;
+  }
+
+  prodOnClick(prod) {
+
+    if (this.router.url === '/info/' + prod) {
+      this.router.navigate(['']);
+
+    }else{
+      this.router.navigate(['/info/' + prod])
+    }
   }
 }

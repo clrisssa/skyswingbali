@@ -14,10 +14,13 @@ export class ProductInfoComponent implements OnInit {
   imgPaths = {}
   checkedList = []
 
-
+  //radio nav
   checkedClass = {'checked': true}
 
   selectedList = {}
+
+  //item captions
+  captions = {}
   
 
   constructor(
@@ -37,6 +40,7 @@ export class ProductInfoComponent implements OnInit {
         }
         this.checkedList[item]["1"] = true
       }
+      this.captions = this.productService.getCaptions(this.prodName)
       console.log("INITIAL: " )
       console.log(this.checkedList)
     });

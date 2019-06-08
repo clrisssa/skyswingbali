@@ -1,67 +1,60 @@
 <div class="container-fluid home-title">
-  <h1>{{prodName}}</h1>
-  <div class="row"></div>
+  <!-- <h1>{{prodName}}</h1> -->
+  <div class="row">
+    <p><br></p>
+  </div>
   <!-- <div style="height: 500px"></div>
   <p class="lead mb-0">You've reached the end!</p> -->
-  <li style="list-style: none;" *ngFor="let item of items">
-    <div class="row">
-
-      <div class="col">
-        {{item}}
-
-
-        <div class="carousel">
-          <!-- <div *ngFor="let path of imgPaths[item]"> -->
-          <input *ngFor="let path of imgPaths[item]" (click)="navOnClick(item,path)" type="radio"
-            id="carousel-{{item}}-{{path}}" name="carousel[]" [checked]="checkedList[item][path]">
-          <!-- </div> -->
-          <!-- <input type="radio" id="carousel-1" name="carousel[]" checked>
-          <input type="radio" id="carousel-2" name="carousel[]">
-          <input type="radio" id="carousel-3" name="carousel[]">
-          <input type="radio" id="carousel-4" name="carousel[]">
-          <input type="radio" id="carousel-5" name="carousel[]"> -->
-          <ul class="carousel__items">
-            <li class="carousel__item" *ngFor="let path of imgPaths[item]">
-              <img src="../../assets/images/{{prodName}}/{{item}}/{{path}}.jpg">
-            </li>
-            <!-- <li class="carousel__item"><img
-                src="//lh5.googleusercontent.com/-cTEgPOnd3l8/U8-EmaZ4KNI/AAAAAAAABc8/6eacbALkQ6A/w1358-h905-no/carousel-1.JPG"
-                alt=""></li> -->
-
-          </ul>
-          <!-- <div class="carousel__prev">
-                  <label for="carousel-1"></label>
-                  <label for="carousel-2"></label>
-                  <label for="carousel-3"></label>
-                  <label for="carousel-4"></label>
-                  <label for="carousel-5"></label>
-                </div>
-                <div class="carousel__next">
-                  <label for="carousel-1"></label>
-                  <label for="carousel-2"></label>
-                  <label for="carousel-3"></label>
-                  <label for="carousel-4"></label>
-                  <label for="carousel-5"></label>
-                </div> -->
-          <div class="carousel__nav">
-            <label *ngFor="let path of imgPaths[item]" for="carousel-{{item}}-{{path}}"
-              (click)=navOnClick(item_path)></label>
-            <!-- <label for="carousel-1" (click)=navOnClick()></label> -->
-            <!-- <label for="carousel-2" ></label>
-            <label for="carousel-3"></label>
-            <label for="carousel-4"></label>
-            <label for="carousel-5"></label> -->
-          </div>
+  <div class="row">
+    <div class="col-6 col-xs-6 col-sm-6 col-md-6" *ngFor="let item of items">
+      <div class="row">
+        <div class="col">
+          {{item}}
         </div>
       </div>
-      
-      <div class="col">
-        <div class="row"><p>   </p></div>
-        <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      </div>
-    </div>
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <div class="carousel">
+                <input *ngFor="let path of imgPaths[item]" (click)="navOnClick(item,path)" type="radio"
+                  id="carousel-{{item}}-{{path}}" name="carousel[]" [checked]="checkedList[item][path]">
+                {{checkedList[item][path]}}
+                <ul class="carousel__items">
+                  <li class="carousel__item" *ngFor="let path of imgPaths[item]">
+                    <img src="../../assets/images/{{prodName}}/{{item}}/{{path}}.jpg">
+                  </li>
+                </ul>
 
-  </li>
+                <div class="carousel__nav">
+                  <label *ngFor="let path of imgPaths[item]" for="carousel-{{item}}-{{path}}"
+                    (click)="navOnClick(item, path)"></label>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p class="text">{{captions[item]}}</p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- <div class="col">
+        <p class="text">{{captions[item]}}</p>
+      </div> -->
+      </div>
+      <div class="row">
+        <br>
+      </div>
+
+
+    </div>
+  </div>
 
   <!-- <div class="carousel">
     <input type="radio" id="carousel-1" name="carousel[]" checked>

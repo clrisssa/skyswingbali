@@ -9,7 +9,7 @@ $black: shade($color-outer, 80%);
 $start-scale: 0.5;
 $start-rot: 190deg;
 
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 html,
 body {
@@ -17,7 +17,7 @@ body {
 }
 body {
   background: beige;
-  font-family: "Georgia", serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 nav {
@@ -45,7 +45,7 @@ nav {
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  font: $size * 0.5 "Georgia", serif;
+  font: $size * 0.5 "Montserrat", sans-serif;
   line-height: $size * 0.8;
   padding-top: $size * 0.2;
   border-radius: $size * $items;
@@ -145,7 +145,7 @@ nav {
   letter-spacing: 5px;
   line-height: 60vh;
   text-shadow: 3px 3px 10px black;
-  font-family: Georgia;
+  font-family: 'Montserrat', sans-serif;
   border: 5px double rgba(255, 255, 255, 0.582);
   /* min-height: 550px;  */
 }
