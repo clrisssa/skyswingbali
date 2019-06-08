@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,21 +8,34 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'skyswing';
-  isOpen:boolean = false
-  toggleText:String = "Menu"
-  imgPath:String = '../assets/images/swing.jpg'
+  isOpen: boolean = false
+  toggleText: String = "Book"
+  imgPath: String = '../assets/images/swing.jpg'
 
-  toggleMenu(){
+  showHome = true
+
+  toggleMenu() {
     console.log("open: " + this.isOpen)
-    if (this.isOpen==false){
-      this.isOpen=true
-      this.toggleText="Close"
-    }else{
-      this.isOpen=false
-      this.toggleText="Menu"
+    if (this.isOpen == false) {
+      this.isOpen = true
+      this.toggleText = "Close"
+    } else {
+      this.isOpen = false
+      this.toggleText = "Book"
     }
   }
 
+  constructor(private router: Router) { }
 
-  
+  menuOnClick(menuItem) {
+    console.log("menuonclick:" + menuItem)
+    if (menuItem == '') {
+      this.showHome = true;
+      this.router.navigate(['/']);
+
+    } else {
+      this.router.navigate(['/book/' + menuItem]);
+      this.showHome = false;
+    }
+  }
 }

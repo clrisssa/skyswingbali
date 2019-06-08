@@ -9,6 +9,7 @@
   background: #fce99c75;
   /* min-height: 550px;  */
 }
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 .text {
@@ -244,10 +245,10 @@ body {
   margin: 0;
 }
 
-.container {
-  width: 900px;
-  min-width: 900px;
-  margin: 50px auto;
-}
+// .container {
+//   width: 900px;
+//   min-width: 900px;
+//   margin: 50px auto;
+// }
 
 @include carousel(10);

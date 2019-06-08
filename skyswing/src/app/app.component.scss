@@ -21,6 +21,8 @@ body {
 }
 
 nav {
+  z-index: 9999;
+
   color: white;
   display: block;
   position: fixed;

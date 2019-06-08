@@ -17,11 +17,14 @@ export class HomeComponent implements OnInit {
 
   open: Boolean = false;
   isOpen: boolean = false
-  toggleText: String = "Menu"
+  toggleText: String = "Book"
 
   //keep track of the button statuses (active/not)
   activeLookup = {}
   changedImg = false;
+
+  //show intro
+  showIntro = true;
 
   constructor(private router: Router) { }
 
@@ -49,7 +52,7 @@ export class HomeComponent implements OnInit {
       this.toggleText = "Close"
     } else {
       this.isOpen = false
-      this.toggleText = "Menu"
+      this.toggleText = "Book"
     }
   }
 
@@ -115,9 +118,11 @@ export class HomeComponent implements OnInit {
 
     if (this.router.url === '/info/' + prod) {
       this.router.navigate(['']);
+      this.showIntro = true;
 
     }else{
       this.router.navigate(['/info/' + prod])
+      this.showIntro = false;
     }
   }
 }

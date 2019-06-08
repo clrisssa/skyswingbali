@@ -17,15 +17,21 @@ export class ProductService {
 
     const folder = '../assets/images/' + 'swing';
 
-    productList['outdoor']["Hot Air Balloon"] = [1]
-    productList['outdoor']["Swing"] = [1,2,3,4]
+    productList['outdoor']["Hot Air Balloon"] = [1,2,3,4]
+    productList['outdoor']["Swing"] = [1,2,3,4,5]
     productList['outdoor']["Rafting"] = [1]
-    productList['outdoor']["VW Safari"] = [1,2,3,4,5] //6
+    productList['outdoor']["VW Safari"] = [1,2,3,4] //6
 
     productList['restaurant']["Restaurant"] = [1,2,3,4,5] //9
     productList['restaurant']["Food"] = [1,2,3,4,5] //6
+
     productList['photo']["Photo Spots"] = [1,2,3,4,5] //8
-    productList['spa']["Spa and Massage"] = [1,2]
+    productList['photo']["Special Moments"] = [1,2,3,4] //8
+
+    productList['spa']["Spa and Massage"] = [1]   
+    productList['spa']["Relax"] = [1,2]
+
+
     console.log(productList[prod])
     return productList[prod]
   }
@@ -34,8 +40,8 @@ export class ProductService {
     let productList = {}
     productList['outdoor'] = ["Hot Air Balloon", "Swing", "Rafting", "VW Safari"]
     productList['restaurant'] = ["Restaurant", "Food"]
-    productList['spa'] = ['Spa and Massage']
-    productList['photo'] = ['Photo Spots']
+    productList['spa'] = ['Spa and Massage', 'Relax']
+    productList['photo'] = ['Photo Spots', 'Special Moments']
 
     return productList[prod]
   }

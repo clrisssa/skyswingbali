@@ -6,7 +6,7 @@
   <!-- <div style="height: 500px"></div>
   <p class="lead mb-0">You've reached the end!</p> -->
   <div class="row">
-    <div class="col-6 col-xs-6 col-sm-6 col-md-6" *ngFor="let item of items">
+    <div class="col-12 col-xs-12 col-sm-6 col-md-6" *ngFor="let item of items">
       <div class="row">
         <div class="col">
           {{item}}
@@ -16,6 +16,7 @@
         <div class="col">
           <div class="row">
             <div class="col">
+
               <div class="carousel">
                 <input *ngFor="let path of imgPaths[item]" (click)="navOnClick(item,path)" type="radio"
                   id="carousel-{{item}}-{{path}}" name="carousel[]" [checked]="checkedList[item][path]">

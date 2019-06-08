@@ -1,18 +1,28 @@
-<div class="parallax text-center fadeInClass" [class.changed-img]="changedImg"
-  [ngStyle]="{'background-image': 'url(' + imgPath + ')'}">
-  <div class="home-title">
-    {{caption}}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-xs-12 col-sm-12 col-md-12">
+      <div class="parallax text-center fadeInClass" [class.changed-img]="changedImg"
+        [ngStyle]="{'background-image': 'url(' + imgPath + ')'}">
+        <div class="home-title">
+          {{caption}}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+<br>
+
+
 
 
 <div class="container-fluid">
-  <div class="row">
+  <!-- <div class="row">
     <div style="height:50px"></div>
-  </div>
+  </div> -->
   <div class="row h-20">
     <!-- <div class="col">
     </div> -->
+
     <div class="col-6 col-xs-6 col-sm-3 col-md-3  text-center">
       <!-- <a routerLink="/info/outdoor"> -->
       <a (click)="prodOnClick('outdoor')">
@@ -58,6 +68,22 @@
         <p class="circle-title text-center">Photo Spots</p>
       </a>
 
+    </div>
+  </div>
+  <div class="row" *ngIf="showIntro">
+    <div class="col text text-center">
+      <br><br>
+      Bali's SkySwing is the best place to find fun challenges and adventures outdoor.
+      Enjoy Bali from a different perspective by getting on our hot-air balloon and swing or explore Bali's traditional
+      villages firsthand,
+      you can find all you need at SkySwing Bali.
+      You could also relax and unwind by treating yourself in our Spa & Massage center.
+      Make your day even more special at SkySwing's restaurant by the paddy field.
+      Satisfy your palate by enjoying our special dishes in our restaurant prepared specially by our chef.
+      <br><br>
+      Get the best out of Bali by spending your holiday at SkySwing!
+
+      <br><br>
     </div>
   </div>
 
